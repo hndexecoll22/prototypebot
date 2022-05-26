@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+<!-- FA simple default response. -->
+  <category>
+    <pattern>GREETINGS</pattern>
+    <template>Hello, how may I help? I am able to provide you with help with regards to financial support, and a range of money saving tips.</template>
+  </category>
+  
+  <category>
+    <pattern>hello</pattern>
+  <template>
+    <srai>GREETINGS</srai>
+  </template>
+  </category>
+  
+  <category>
+    <pattern>hi *</pattern>
+  <template>
+    <srai>GREETINGS</srai>
+  </template>
+  </category>
+
+  <category>
+    <pattern>hi </pattern>
+    <template>
+      <srai>GREETINGS</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>* could I get help *</pattern>
+    <template>
+      <srai>GREETINGS</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>I UNDERSTAND</pattern>
+    <template>Is there anything else I can help you with? </template>
+  </category>
+
+  <category>
+    <pattern>THANKS</pattern>
+    <template>If you have no further questions, have a good day and I hope that I could help you.</template>
+  </category>
+
+  <category>
+    <pattern>Thank you</pattern>
+    <template>
+      <srai>THANKS</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>*</pattern>
+    <template>
+      <random>
+        <li>I'm sorry, I didn't catch that, could you repeat?</li>
+        <li>I'm sorry. I don't understand. Could you rephrase?</li>
+      </random>
+    </template>
+  </category>
+</aiml>

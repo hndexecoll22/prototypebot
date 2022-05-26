@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Author: -->
+<aiml>
+  <category>
+    <pattern>I WOULD LIKE HELP WITH *</pattern>
+    <template>
+      <think>
+        <set name ="userFinanceChoice">
+          <star/>
+        </set>
+      </think>
+      <condition name="userFinanceChoice">
+        <li value="financial support">There are a few financial matters that I can help with. Government support, and local council support. What type of support are you looking for?</li>
+        <li>I'm sorry, I didn't catch that, Could you repeat?</li>
+      </condition>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Could I get help with *</pattern>
+    <template>
+      <srai>I WOULD LIKE HELP WITH</srai>
+      <srai>
+        <star/>
+      </srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>Please could you help me with *</pattern>
+    <template>
+      <srai>I WOULD LIKE HELP WITH</srai>
+      <srai>
+        <star/>
+      </srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>Government support</pattern>
+    <template>
+      In terms of government support, they are able to provide universal credit to whoever meets the requirements. Would you like to learn more about the requirements for universal credit?
+    </template>
+  </category>
+
+  <category>
+    <pattern>MORE UNIVERSAL CREDIT HELP</pattern>
+    <template>
+      To apply for universal credit, there are a few conditions which will be listed below:
+      - You must live in the UK. 
+      - You must be older than 18 years old, but there are however a couple of exceptions.
+      - You must be under the state pension age. 
+      - You must have £16,000 or less in money, savings and investments.
+      - You may make claims for support depending on health conditions or disabilities. To find out more regarding disabilities, please follow this link: https://www.gov.uk/health-conditions-disability-universal-credit.
+      - For under 18s, there are a few other conditions that apply, if you would like to know please specify below.
+    </template>  
+  </category>
+
+  <category>
+    <pattern>universal credit</pattern>
+      <template>
+        <srai>MORE UNIVERSAL CREDIT HELP</srai>
+      </template>
+  </category>
+
+  <category>
+    <pattern>YES</pattern>
+    <template>
+      <srai>MORE UNIVERSAL CREDIT HELP</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>okay</pattern>
+    <template>
+      <srai>MORE UNIVERSAL CREDIT HELP</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>ok</pattern>
+    <template>
+      <srai>MORE UNIVERSAL CREDIT HELP</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>yes please</pattern>
+    <template>
+      <srai>MORE UNIVERSAL CREDIT HELP</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>UNDER 18</pattern>
+    <template>
+      To apply for universal credit under the age of 18 any of the following conditions must apply:
+      - You have a health condition or disability and have medical evidence for it, such as a fit note. 
+      - You are caring for a severely disabled person. 
+      - You are responsible for a child. 
+      - You live with your partner, have a child, and your partner is eligible for unviersal credit.
+      - You are pregnant and expecting your baby in the next 11 weeks. 
+      - You have had a baby in the last 15 weeks. 
+      - You do not have parental support, you do not live with your parents and are not under local authority care. 
+    </template>
+  </category>
+
+  <category>
+    <pattern>I am under 18</pattern>
+    <template>
+      <srai>UNDER 18</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>support for under 18</pattern>
+    <template>
+      <srai>UNDER 18</srai>
+    </template>
+  </category>
+  
+  <category>
+    <pattern>LOCAL COUNCIL SUPPORT</pattern>
+    <template>
+      The local council may offer housing benefits to anyone who satisfies the following conditions:
+      - You may claim for housing benefits if you rent from a private landlord or letting agency. 
+      - You rent from a housing association.
+      - You rent from a charity.
+      - Or you rent from the council itself.
+      You are entitled to claim council tax support even if you own your home, but you won't be able to claim housing benefit.
+      To learn more, please follow this link: https://exeter.gov.uk/benefits-and-welfare/how-to-claim-benefits/what-you-need-to-know-about-benefits/benefit-support-available/
+    </template>
+  </category>
+
+  <category>
+    <pattern>HELP WITH MONEY SAVING</pattern>
+    <template>
+      One of the most frequent tips given for money saving around the house is to have your insulation checked. 
+      A lot of homes are poorly insulated and lose a lot of heat through the walls and roof. 
+      Certain companies offer a free consultation/check up on your house.
+      Get more energy efficient appliances.
+      More efficient light bulbs.
+      One long term and quite expensive idea is to install your own solar panels which will reduce the amount of energy you will need to buy from energy companies.
+    </template>
+  </category>
+</aiml>
