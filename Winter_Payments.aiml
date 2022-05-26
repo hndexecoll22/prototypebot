@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+  <topic name="winter">
+    <category>
+      <pattern>What support is available</pattern>
+      <template>
+        A Winter Fuel Payment benefit can be offered to certain individuals meaning that they will receive a sum of between £100-300 that is given to help people pay heating bills
+      </template>
+    </category>
+    <category>
+      <pattern>
+        tell me more
+      </pattern>
+      <template>
+        Yes <set name="fuel"/>
+      </template>
+    </category>
+    
+    
+    
+    <topic name="fuel">
+      <category>
+        <pattern>I am with *</pattern>
+        <template>British Gas, Scottish Power, Ovo, EON, EDF, and Bulb energy offer grants to their customers who are in debt to their energy supplier so that they can pay it off. British Gas especially offers grants that are available to everyone, not just their customers.</template>
+      </category>
+      <category>
+        <pattern>*</pattern>
+        <template>I can only understand certain things</template>
+      </category>
+      <category>
+        <pattern>tell me about winter fuel payment</pattern>
+        <template>
+          <srai>FUELPAYMENT</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>what are the requirements</pattern>
+        <template>
+          <srai>FUELPAYMENT</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>how much can * get</pattern>
+        <template>With the winter fuel payment, you can receive anywhere between £100-300</template>
+      </category>
+      <category>
+        <pattern>FUELPAYMENT</pattern>
+        <template>
+          It is a benefit that provides support for people to pay heating bills, the requirements are as follows:
+          People who are eligible for the Winter Fuel Payment must be born before or on 26 September 1955 and either Lived in the UK for at least a day during 20-26 September 2021 during the qualifying week or
+          Live in Sqitzerland or a EEA countyry and have a genuiune and sufficient link to the UK, like having lived or worked in the UK, or having family in the UK
+        </template>
+      </category>
+      <category>
+        <pattern>
+          I live outside of UK
+        </pattern>
+        <template>The winter fuel paymenty plan is not eigible for those living in Cyprus, France Gibraltar, Greece, Malta, Portugal, or Spain, as the average winter temperature is higher than the warmest region of the UK</template>
+      </category>
+      <category>
+        <pattern>I am eligible</pattern>
+        <template>
+          Those who are eligible will get their payment automatically if they either:
+          Get state Pension
+          Get another social security benefit whbich excludes Housing Benefits, Council Tax Reduction, Child Benefit, or Universal credit
+          However, those that do not get either of these, or live aborad need to make a claim on the Government Website
+        </template>
+      </category>
+    </topic>
+  </topic>
+</aiml>

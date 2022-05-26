@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <topic name="saving">
+    <category>
+      <pattern>how can I save money on eletricity</pattern>
+      <template>
+        Yes. <set topic="electricity"></set>
+      </template>
+    </category>
+    
+    
+    <category>
+      <pattern>how can I save money on gas</pattern>
+      <template>
+        Yes. <set topic="gas"></set>
+      </template>
+    </category>
+
+    <topic name="gas">
+      <category>
+        <pattern>*</pattern>
+        <template>
+          I can only tell you about saving gas
+        </template>
+      </category>
+      <category>
+        <pattern>tell me more</pattern>
+        <template>
+          According to moneyhelper.org.uk, the best way to save money on gas is simply to use less, pay by direct debit (as it is usually cheaper and you physically can't really miss a payment with it) and make your home more eco-friendly. Adding things such as better insulation, a new boiler, or solar panels could greatly reduce your gas bill.
+        </template>
+      </category>
+    </topic>
+
+
+    <topic name="electricity">
+      <category>
+        <pattern>*</pattern>
+        <template>I can only tell you about saving electricity</template>
+      </category>
+      <category>
+        <pattern>LED</pattern>
+        <template>
+          LED bulbs are more energy efficient than incandescent or fluorescent bulbs. On average, an incandescent light may last around 1000 hours. A fluorescent bulb producing the same amount of light may last around 8000 hours. However, an LED bulb may last around 25000 hours.
+          While the price of an LED bulb is higher than other types of bulbs, the amount of energy they save over time makes it worthwhile. The price of running a 60-Watt incandescent bulb for 20 years (with 6 hours per day) is $360 USD. The price of running a 60-Watt LED bulb for the equivalent amount of time is $72.
+        </template>
+      </category>
+      <category>
+        <pattern>* light bulbs *</pattern>
+        <template>
+          <srai>LED</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>tell me about light bulbs</pattern>
+        <template>
+          <srai>LED</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>tell me about plugs</pattern>
+        <template>
+          <srai>PLUG</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>PLUG</pattern>
+        <template>Electronics that are turned off and set to stand-by, but are still switched on at the plug still use electricity so that they can be switched back on</template>
+      </category>
+      <category>
+        <pattern>* plug *</pattern>
+        <template>
+          <srai>PLUG</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>SWITCHES</pattern>
+        <template>
+          Smart switches, like timed plugs or mobile-operated plugs can be used to turn off electronics without needing direct interaction from the user. An example of where this could be used is using a timer plug to switch off the house’s internet router when people are out of the house or asleep and thus not using the house’s internet.
+          Smart switches also exist for light bulbs.
+        </template>
+      </category>
+      <category>
+        <pattern>* switches *</pattern>
+        <template>
+          <srai>SWITCHES</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>COILS</pattern>
+        <template>
+          The cooling coil elements on the back of a fridge can get dirty. This reduces the efficiency of the fridge as it needs to work harder to produce the same amount of cooling. Cleaning the dirt and dust off the coils allows the fridge to work properly again.
+        </template>
+      </category>
+      <category>
+        <pattern>* coils *</pattern>
+        <template>
+          <srai>COILS</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>FRIDGEFREEZER</pattern>
+        <template>Adjusting the temperature settings of the fridge and freezer to the optimum ranges can increase the life of the fridge as it will allow the fridge to run more efficiently. This also helps to reduce electricity costs. The optimum temperature for a fridge is between 3 to 5°C. The optimum temperature for a freezer is between -17 to -12°C.</template>
+      </category>
+      <category>
+        <pattern>fridge</pattern>
+        <template>
+          <srai>FRIDGEFREEZER</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>* fridge *</pattern>
+        <template>
+          <srai>FRIDGEFREEZER</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>freezer</pattern>
+        <template>
+          <srai>FRIDGEFREEZER</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>* freezer *</pattern>
+        <template>
+          <srai>FRIDGEFREEZER</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>HEAT</pattern>
+        <template>The Sun can be used to provide both warmth and light in a household by opening the curtains to let Sun in. The reduces the need for using energy to light or heat the house.</template>
+      </category>
+      <category>
+        <pattern>* heat *</pattern>
+        <template>
+          <srai>HEAT</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>heat</pattern>
+        <template>
+          <srai>HEAT</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>AIRDRY</pattern>
+        <template>
+          If the weather is appropriate, clothes can be dried outside in the Sun, or inside in the heat. Doing this mitigates the need to use a tumble dryer to dry clothes, which uses electricity.
+        </template>
+      </category>
+      <category>
+        <pattern>* air dry *</pattern>
+        <template>
+          <srai>AIRDRY</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>air dry</pattern>
+        <template>
+          <srai>AIRDRY</srai>
+        </template>
+      </category>
+    </topic>   
+  </topic>
+</aiml>

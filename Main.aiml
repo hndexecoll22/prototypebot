@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Author: Harry Watson -->
+<aiml>
+  <!-- Lifelike -->
+  <category>
+    <pattern>wyd</pattern>
+    <template>
+      <srai>WYD</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>WYD</pattern>
+    <template>I am now talking to you</template>
+  </category>
+  <category>
+    <pattern>brb</pattern>
+    <template>
+      <srai>BRB</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>BRB</pattern>
+    <template>Okay! see you in a moment</template>
+  </category>
+  <category>
+    <pattern>I am * and I am looking for *</pattern>
+    <template>
+      Hi! <star index="2"/>. <star index="1"/> is reasonable to look at!
+    </template>
+  </category>
+  <category>
+    <pattern>I work as *</pattern>
+    <template>
+      <star index="1"/> Thats a very important job!
+    </template>
+  </category>
+  <category>
+    <pattern>What is your name</pattern>
+    <template>My name is Chat bot</template>
+  </category>
+  <category>
+    <pattern>What time is it</pattern>
+    <template>
+      The time is: <date format="%H"/>
+    </template>
+  </category>
+  <!--Vary greeting on timezone https://stackoverflow.com/questions/55717225/aiml-chatbot-response-differs-at-different-times -->
+  <category>
+    <pattern>TIMEZONE</pattern>
+    <template>
+      <think>
+        <set name="hour">
+          <date format="%H"/>
+        </set>
+      </think>
+      <condition name="hour">
+        <li value="00">Hello, its the middle of the night</li>
+        <li value="01">Hello, it's only just morning</li>
+        <li value="02">Hello how are you this morning?</li>
+        <li value="03">Hello how are you this morning?</li>
+        <li value="04">Hello how are you this morning?</li>
+        <li value="05">Hello how are you this morning?</li>
+        <li value="06">Hello how are you this morning?</li>
+        <li value="07">Hello how are you this morning?</li>
+        <li value="08">Hello how are you this morning?</li>
+        <li value="09">Hello how are you this morning?</li>
+        <li value="10">Hello how are you this morning?</li>
+        <li value="11">Hello how are you this morning?</li>
+        <li value="12">Its now lunchtime</li>
+        <li value="13">Its now the afternoon</li>
+        <li value="14">Its now the afternoon</li>
+        <li value="15">Its now the afternoon</li>
+        <li value="16">Its now the afternoon</li>
+        <li value="17">Its now evening!</li>
+        <li value="18">Its now evening!</li>
+        <li value="19">Its now evening!</li>
+        <li value="20">Its now evening!</li>
+        <li value="21">Its now night time for me</li>
+        <li value="22">Its now night time for me</li>
+        <li value="23">Its now night time for me</li>
+      </condition>
+    </template>
+  </category>
+  
+  
+
+  <!-- Greetings -->
+  <category>
+    <pattern>Hi</pattern>
+    <template>
+      <srai>GREETINGS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>Hi *</pattern>
+    <template>
+      <srai>GREETINGS</srai>
+      <srai>HRU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>Hello</pattern>
+    <template>
+      <srai>GREETINGS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>Hello world</pattern>
+    <template>
+      <srai>GREETINGS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>Good morning</pattern>
+    <template>
+      <srai>GREETINGS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>bonjour</pattern>
+    <template>
+      <srai>GREETINGS</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>GREETINGS</pattern>
+    <template>
+      <random>
+        <li>Hi!</li>
+        <li>Hello!</li>
+        <li>Bonjour</li>
+        <li>Hello world</li>
+        <li>Greetings</li>
+      </random>
+    </template>
+  </category>
+  <category>
+    <pattern>How are you</pattern>
+    <template>
+      <srai>HRU</srai>
+    </template>
+  </category>
+  <category>
+    <pattern>HRU</pattern>
+    <template>I am good thank you</template>
+  </category>
+  
+  <!-- Conditions-->
+  <category>
+    <pattern>lets talk about universal credit</pattern>
+    <template>
+      <think>
+        <set name="state">universal</set>
+      </think>
+      <condition name="state" value="universal">
+        <set name="topic">universal</set>
+      </condition>
+    </template>
+  </category>
+
+  <category>
+    <pattern>lets talk about winter fuel payment</pattern>
+    <template>
+      <think>
+        <set name="state">fuelpayment</set>
+      </think>
+      <condition name="state" value="fuelpayment">
+        <set name="topic">winter</set>
+      </condition>
+    </template>
+  </category>
+
+  <category>
+    <pattern>lets talk about saving money</pattern>
+    <template>
+      <think>
+        <set name="state">saving</set>
+      </think>
+      <condition name="state" value="saving">
+        <set name="topic">saving</set>
+      </condition>
+    </template>
+  </category>
+
+
+  <category>
+    <pattern>lets talk about council support</pattern>
+    <template>
+      <think>
+        <set name="state">council</set>
+      </think>
+      <condition name="state" value="council">
+        <set name="topic">council</set>
+      </condition>
+    </template>
+  </category>
+
+  <category>
+    <pattern>do you have advice</pattern>
+    <template>
+      <think>
+        <set name="state">advice</set>
+      </think>
+      <condition name="state" value="advice">
+        <set name="topic">advice</set>
+      </condition>
+    </template>
+  </category>
+</aiml> 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

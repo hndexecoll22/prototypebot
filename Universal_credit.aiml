@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<aiml>
+  <topic name="universal">
+    <category>
+      <pattern>what is universal credit</pattern>
+      <template>
+        According to Gov.Uk, Universal Credit is a payment to help with your living costs. It’s paid monthly - or twice a month for some people in Scotland. You may be able to get it if you’re on a low income, out of work or you cannot work
+      </template>
+    </category>
+    <category>
+      <pattern>What is means tested</pattern>
+      <template>It is a method for determining whether someone qualifies for financial assistance to obtain a service or good for example welfare or benefits. It looks at a wide variety of different sources that a person has mainly looking at the means or monetary resources a person has available and then determines that person’s access to financial assistance based on their ability to pay for it </template>
+    </category>
+    <category>
+      <pattern>what is the requirement for universal credit</pattern>
+      <template>
+        You may be able to get universal credit if youy are on low income, out of work or you cannot work. The requirements can be quite complicated based on your circumstances so I will do my best so that you understand!
+        <srai>REQUIREMENTS</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>
+        REQUIREMENTS
+      </pattern>
+      <template>
+        The general requirements are as follows:
+        Live in the UK
+        Be aged 18 or over (however there are exceptions to this if you are 16-17)
+        Be under state pension age (basically the earliest you can recieve your state pension)
+        Have £16,000 or less in money, savings and investments
+      </template>
+    </category>
+
+    <!-- Outside of Scope -->
+    <category>
+      <pattern>I am a student</pattern>
+      <template>
+        Yes <set name="student"/>
+      </template>
+    </category>
+    
+    <category>
+      <pattern>I am a EU citizen</pattern>
+      <template>
+        <srai>NOTUK</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>I am a EEA citizen</pattern>
+      <template>
+        <srai>NOTUK</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>I am a Swiss citizen</pattern>
+      <template>
+        <srai>NOTUK</srai>
+      </template>
+    </category>
+    <category>
+      <pattern>
+        NOTUK
+      </pattern>
+      <template>
+        You and your family might also need settled or pre-settled status under the EU settlement Scheme to get universal credit
+      </template>
+    </category>
+    
+    
+    
+    
+    <topic name="student">
+      <category>
+        <pattern>*</pattern>
+        <template>I can only understand certain (insert placeholder)</template>
+      </category>
+      <category>
+        <pattern>tell me more</pattern>
+        <template>
+          For students, you need to check that the below criteria fits your case:
+          You lived with your partner and they're eligible for universal credit
+          You are responsible for a child, either as a single person or couple
+          You have reached state pension age and live with a partner who is below state pension age
+          Also on a side note, you can claim universal credit if you are 21 or under, studying any qualifications up to A level or equivalent and do not have parental support.
+          You may be able to claim if you are studying part-time or doing a course for which no student loan or finance is available.
+        </template>
+      </category>
+      <category>
+        <pattern>I have a disability</pattern>
+        <template>
+          <srai>HEALTH</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>I have a health condition</pattern>
+        <template>
+          <srai>HEALTH</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>HEALTH</pattern>
+        <template>
+          You can claim universal credit if you are in full-time education, have limited capability for work and are entitled to any of the following:
+          Personal independance payment
+          Disability living allowance
+          Child disability payment in Scotland
+          Attendance allowance
+          Armed forces independance payment
+        </template>
+      </category>
+      <category>
+        <pattern>I am below 18</pattern>
+        <template>
+          You can claim for universal credit if any of the following apply:
+          You have a health condition or disability and have medical evidence for it, such as a fit note
+          You are caring for a severely disabled person
+          You are responsible for a child
+          You live with your partner, have responsibility for a child and your partner is eligible for Universal Credit
+          You are pregnant and expecting your baby in the next 11 weeks
+          You have had a baby in the last 15 weeks
+          You do not have parental support, for example you do not live with your parents and are not under local authority care
+        </template>
+      </category>
+      
+      <!-- Inside Scope -->
+      <category>
+        <pattern>I am a EU citizen</pattern>
+        <template>
+          <srai>NOTUK</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>I am a EEA citizen</pattern>
+        <template>
+          <srai>NOTUK</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>I am a Swiss citizen</pattern>
+        <template>
+          <srai>NOTUK</srai>
+        </template>
+      </category>
+      <category>
+        <pattern>
+          NOTUK
+        </pattern>
+        <template>
+          You and your family might also need settled or pre-settled status under the EU settlement Scheme to get universal credit
+        </template>
+      </category>
+    </topic>
+  </topic>
+</aiml>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+  <topic name="advice">
+    <category>
+      <pattern>*</pattern>
+      <template>
+        I can direct you to some websites for further advice
+      </template>
+    </category>
+    <category>
+      <pattern>tell me more</pattern>
+      <template>
+        Heres some useful links for you to try out: 
+        
+        https://www.moneyhelper.org.uk/en/everyday-money/budgeting/how-to-save-money-on-household-bills
+
+        https://www.understandinguniversalcredit.gov.uk/new-to-universal-credit/help-with-managing-your-money/
+
+        https://www.citizensadvice.org.uk/
+
+        https://www.moneysavingexpert.com/family/money-help/#cuthouseholdbills
+
+      </template>
+    </category>
+  </topic>
+
+</aiml>
