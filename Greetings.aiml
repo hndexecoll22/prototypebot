@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+	<!-- Greetings. -->
+	
+	<category>
+		<pattern>GREETINGS</pattern>
+		<template>
+			<random>
+				<li>Hello </li>
+				<li>Greetings </li>
+				<li>Hello there </li>
+			</random><get name ="username"/>
+		</template>
+	</category>
+
+
+	<category>
+		<pattern>Greetings *</pattern>
+		<template>
+			<srai>GREETINGS</srai>
+			<srai><star/></srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>Hello</pattern>
+		<template>
+			<srai>GREETINGS</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>Hello *</pattern>
+		<template>
+			<srai>GREETINGS</srai>
+			<srai><star/></srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>Hi</pattern>
+		<template>
+			<srai>GREETINGS</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>Hi *</pattern>
+		<template>
+			<srai>GREETINGS</srai>
+			<srai><star/></srai>
+		</template>
+	</category>
+
+	<!-- Responding to the User asking how the bot is. -->
+	
+	<category>
+		<pattern>HOW ARE YOU</pattern>
+		<template>
+			<condition name= "usernameSet">
+				<li value = "true">I am ready to help, <get name ="username"/>!</li>
+				<li>I am ready to help you!</li>
+			</condition>
+		</template>
+	</category>
+
+	<category>
+		<pattern>How are you *</pattern>
+		<template>
+			<srai>HOW ARE YOU</srai>	
+		</template>
+	</category>
+	
+</aiml>

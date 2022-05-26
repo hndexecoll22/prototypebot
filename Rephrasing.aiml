@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+	<!-- Rephrasing user questions into ones recognisable by the bot. -->
+
+	<!-- What -->
+	
+	<category>
+		<pattern>DO YOU KNOW WHAT * IS</pattern>
+		<template>
+			<srai>WHAT IS <star/></srai>
+		</template>
+	</category>
+
+	<!-- Where -->
+
+	<category>
+		<pattern>DO YOU KNOW WHERE * IS</pattern>
+		<template>
+			<srai>WHERE IS <star/></srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>HOW DO I FIND *</pattern>
+		<template>
+			<srai>WHERE IS <star/></srai>
+		</template>
+	</category>
+
+	<!-- Discuss -->
+
+	<category>
+		<pattern>* DISCUSS *</pattern>
+		<template>
+			<srai>DISCUSS <star index = "1"/></srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>TALK ABOUT *</pattern>
+		<template>
+			<srai>
+				DISCUSS <star index = "1"/>
+			</srai>
+		</template>
+	</category>
+
+	<category>
+		<pattern>* TALK ABOUT *</pattern>
+		<template>
+			<srai>
+				DISCUSS <star index = "1"/>
+			</srai>
+		</template>
+	</category>
+	
+</aiml>

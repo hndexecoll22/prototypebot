@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <aiml>
-  <!-- FA simple default response. -->
-  <category>
-    <pattern>*</pattern>
-    <template>
-      <random>
-        <li>I'm sorry I don't understand</li>
-        <li>I just don't get it</li>
-        <li>It makes no sense to me</li>
-        <li>It's a mystery to me!</li>
-        <li>It's completely beyond me</li>
-        <li>I can't get my head around it</li>
-      </random>
-    </template>
-  </category>
+	<!-- FA simple default response. -->
+
+	<category>
+		<pattern>LETS DISCUSS NOTHING</pattern>
+		<template>
+			<think>
+				<set name = "topic">nothing</set>
+			</think>
+		</template>
+	</category>
+
+	<category>
+		<pattern>*</pattern>
+		<template>
+			<random>
+				<li>Sorry</li>
+				<li>I'm Sorry</li>
+				<li>I am Sorry</li>
+				<li>Apologies</li>
+				<li>My apologies</li>
+			</random><condition name= "usernameSet">
+				<li value = "true"> <get name ="username"/>, </li>
+				<li>, </li>
+			</condition><random>
+				<li>I don't understand.</li>
+				<li>I do not understand.</li>
+				<li>I'm afraid I don't understand.</li>
+				<li>I'm afraid I do not understand.</li>
+				<li>could you rephrase that?</li>
+			</random>
+		</template>
+	</category>
+	
 </aiml>

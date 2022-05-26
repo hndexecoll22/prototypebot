@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+	<!-- Information about saving money on electricity usage. -->
+
+	<topic name = "electricity">
+
+		<category>
+			<pattern>DISCUSS ELECTRICITY</pattern>
+			<template>We are already talking about money saving tips for the home regarding electricity usage</template>
+		</category>
+
+		<category>
+			<pattern>*</pattern>
+			<template>
+				<random>
+					<li>Sorry </li>
+					<li>I'm Sorry </li>
+					<li>I am Sorry </li>
+					<li>Apologies </li>
+					<li>My apologies </li>
+				</random><get name ="username"/> <random>
+					<li>I don't understand </li>
+					<li>I do not understand </li>
+					<li>I'm afraid I don't understand </li>
+					<li>I'm afraid I do not understand </li>
+				</random>how this relates to money saving tips for the home reguarding electricity usage
+			</template>
+		</category>
+
+		<!-- Electricity saving tips. -->
+
+		<category>
+			<pattern>GIVE ME A TIP</pattern>
+			<template>
+				<random>
+					<li>LED bulbs are more efficient than other types of bulbs! Type "led bulbs" for more info</li>
+					<li>Electronics that are on stand-by mode but are still switched on at the plug will use electricity.
+Switch electronics off at the wall to save electricity!</li>
+					<li>Smart switches can be used to turn off electronics without needing direct interaction from the user.</li>
+					<li>Dirty cooling coil elements on the back of your fridge will reduce efficiency.
+Cleaning the cooling elements will allow to fridge to use its intended power draw.</li>
+					<li>The optimum temperature for a fridge is 3-5°C, and the optimum temperature for a freezer is -17 to -12°C.
+Setting your appliances' temperatures to these values can reduce power useage and increase the lifespan.</li>
+					<li>Opening the curtains to let natural Sunlight in can provide lighting and heating to your house.</li>
+					<li>If the weather is nice, clothes can be dried outside rather than using a tumble drier, which uses electricity</li>
+				</random>
+			</template>
+		</category>
+
+		<category>
+			<pattern>tell me a tip</pattern>
+			<template>
+				<srai>GIVE ME A TIP</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>led bulbs</pattern>
+			<template>
+				LED bulbs can last for around 25,000 hours, whereas fluorescent bulbs can only last 8000 hours,
+and incandescent bulbs around 1000 hours.
+The upfront cost to buy an LED bulb is more than other types of bulbs, however they make up for it in the amount of energy they save.
+The price of running a 60-Watt incandescant bulb for 20 years (6 hours per day) is around £290. An equivalent LED bulb for the same amount of time would only cost £59!
+			</template>
+		</category>
+		
+	</topic>
+</aiml>

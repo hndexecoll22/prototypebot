@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+	<!-- Information about saving money on gas usage. -->
+
+	<topic name = "gas">
+
+		<category>
+			<pattern>DISCUSS GAS</pattern>
+			<template>We are already talking about money saving tips for the home regarding gas usage</template>
+		</category>
+		
+		<category>
+			<pattern>*</pattern>
+			<template>
+				<random>
+					<li>Sorry </li>
+					<li>I'm Sorry </li>
+					<li>I am Sorry </li>
+					<li>Apologies </li>
+					<li>My apologies </li>
+				</random><get name ="username"/> <random>
+					<li>I don't understand </li>
+					<li>I do not understand </li>
+					<li>I'm afraid I don't understand </li>
+					<li>I'm afraid I do not understand </li>
+				</random>how this relates to money saving tips for the home reguarding gas usage
+			</template>
+		</category>
+
+		<!-- Gas saving tips. -->
+
+		<category>
+			<pattern>GIVE ME A TIP</pattern>
+			<template>
+				<random>
+					<li>Installing a new, more efficient boiler can reduce the amount of gas needed to heat your house</li>
+					<li>Setting up monthly bill payments by direct debit is usually around 6% cheaper than other ways of paying!</li>
+					<li>Installing better house insulation can lead to reduced use of gas for heating. For more info, type "insulation"</li>
+					<li>Installing solar panels can help reduce gas usage by generating power from the Sun which can be used instead of gas</li>
+				</random>
+			</template>
+		</category>
+
+		<category>
+			<pattern>tell me a tip</pattern>
+			<template>
+				<srai>GIVE ME A TIP</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>insulation</pattern>
+			<template>
+				There are different types of insulation available for the home.
+Around 1/3 of the heat lost in an uninsulated home escapes through the walls. Both cavity walls and solid walls can be insulated.
+Floors and roofs and lofts can also be insulated.
+Draught-proofing your house can reduce heat loss, lowering the potential usage of gas for heating the house.
+Double or triple glazing windows can also help reduce heat loss.
+Tanks, pipes and rediators can also be insulated.
+			</template>
+		</category>
+		
+	</topic>
+</aiml>

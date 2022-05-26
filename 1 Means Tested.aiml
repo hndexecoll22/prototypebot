@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+	<!-- Information about means tested financial support available. -->
+	
+	<topic name = "means tested">
+
+		<category>
+			<pattern>DISCUSS MEANS TESTED</pattern>
+			<template>We are already talking about means-tested financial support</template>
+		</category>
+
+		<category>
+			<pattern>*</pattern>
+			<template>
+				<random>
+					<li>Sorry </li>
+					<li>I'm Sorry </li>
+					<li>I am Sorry </li>
+					<li>Apologies </li>
+					<li>My apologies </li>
+				</random><get name ="username"/> <random>
+					<li>I don't understand </li>
+					<li>I do not understand </li>
+					<li>I'm afraid I don't understand </li>
+					<li>I'm afraid I do not understand </li>
+				</random>how this relates to means tested financial support
+			</template>
+		</category>
+
+		<!-- Means tests. -->
+		
+		<category>
+			<pattern>WHAT IS A MEANS TEST</pattern>
+			<template>
+				A means test is a official investigation into one's financial circumstances  to determine their eligibility for governement assistance. For more information, type "tell me more"
+			</template>
+		</category>
+
+		<category>
+			<that>a means test is a official investigation into one's financial circumstances to determine their eligibility for governement assistance. For more information, type "tell me more"</that>
+			<pattern>tell me more</pattern>
+			<template>
+				Also called a financial assessment, ir works out if the council will pay towards your neccesary expenses. Factors that may be investigated are:
+Earnings
+Pensions
+Benefits
+Savings
+Property
+			</template>
+		</category>
+		
+		<!-- Keyword Recognition: Means tested. -->
+		
+		<category>
+			<pattern>WHAT * MEANS TESTED * </pattern>
+			<template>
+				<srai>WHAT IS A MEANS TEST</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* MEANS TESTED</pattern>
+			<template>
+				<srai>WHAT IS A MEANS TEST</srai>
+			</template>
+		</category>
+		
+		<!-- Universal credit. -->
+
+		<category>
+			<pattern>WHAT IS UNIVERSAL CREDIT</pattern>
+			<template>
+				Universal Credit is a payment to help with living costs. It is paid monthly, or twice per month for some people in Scotland. Universal credit is granted to those who may be on a low income, out of work or cannot work. For more information, type "tell me more"
+			</template>
+		</category>
+
+		<!-- Keyword Recognition: Universal credit. -->
+		
+		<category>
+			<pattern>* UNIVERSAL CREDIT</pattern>
+			<template>
+				<srai>WHAT IS UNIVERSAL CREDIT</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* UNIVERSAL CREDIT *</pattern>
+			<template>
+				<srai>WHAT IS UNIVERSAL CREDIT</srai>
+			</template>
+		</category>
+		
+		<category>
+			<that>universal credit is a payment to help with living costs. It is paid monthly, or twice per month for some people in Scotland. Universal credit is granted to those who may be on a low income, out of work or cannot work. For more information, type "tell me more"</that>
+			<pattern>tell me more</pattern>
+			<template>
+The general requirements for Universal Credit are that you must:
+Live in the UK
+Be aged 18 or over (there are some exceptions if you are 16 to 17)
+Be under State Pension age (that is, the earliest you can receive your state pension)
+Have £16,000 or less in money, savings and investments
+For more information, type "UC for students", "UC for students with disabilities or health conditions", "UC for partners", "UC for EU EEA or Swiss citizens", or "UC for 16 to 17 year olds"
+			</template>
+		</category>
+
+		<category>
+			<pattern>uc for students</pattern>
+			<template>
+				Students in full-time education may make a claim for Universal Credit if either:
+You live with your partner, who is eligible for Universal Credit
+You're responsible for a child, either as a single person or as a couple
+You've reached State Pension age and live with a partner who is below State Pension age
+You are 21 or under, and are studing a qualification up to A level or equivalent, without any parental support
+
+Students who are either studying part-time, or on a course where no student loan or finance is available, may be able to make a claim
+			</template>
+		</category>
+
+		<category>
+			<pattern>uc for students with disabilities or health conditions</pattern>
+			<template>
+				Universal Credit is eligible for those who are in full-time education, have limited capability for work and are entitled to any of the following:
+Personal Independence Payment (PIP)
+Disability Living Allowance (DLA)
+Child Disability Payment (CDP) in Scotland
+Attendance Allowance
+Armed Forces Independence Payment
+			</template>
+		</category>
+
+		<category>
+			<pattern>uc for partners</pattern>
+			<template>
+				Partners will both need to apply for Universal Credit. A joint claim for their household must be made, even if either partner is not eligible. How much Universal Credit that is to be granted depends on both partners' income and savings				
+			</template>
+		</category>
+
+		<category>
+			<pattern>uc for eu eea or swiss citizens</pattern>
+			<template>
+				Anyone who is an EU, EEA or Swiss citizen will may need settled or pre-settles status inther the EU Settlement Scheme, for both themselves and their family
+			</template>
+		</category>
+
+		<category>
+			<pattern>uc for 16 to 17 year olds</pattern>
+			<template>
+				Those who are aged 16 to 17 can apply for Universal Credit if either:
+You have a health condition or disability and have medical evidence to prove so
+You're caring for someone who is severely disabled
+You're responsible for a child
+You live with your partner, have responsibility for a child and your partner is eligible for Universal  credit
+You're pregnant and expecting a baby in the next 11 weeks
+You've had a baby in the last 15 weeks
+Youdo not have parental support, for example you do not live with your parents and are not under local authority care
+			</template>
+		</category>
+		
+	</topic>
+</aiml>

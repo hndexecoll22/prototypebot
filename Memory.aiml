@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+	<!-- Memorising information using Think-Set-Get. -->
+
+	<!-- Finding out the User's name. -->
+	
+	<category>
+		<pattern>My name is *</pattern>
+		<template>
+			<think>
+				<set name = "usernameSet">true</set>
+				<set name = "username"><star/></set>
+			</think>
+			<random>
+				<li>Nice to meet you </li>
+				<li>Greetings </li>
+				<li>Hello </li>
+				<li>Hi </li>
+			</random><get name = "username"/>.
+		</template>
+	</category>
+
+</aiml>

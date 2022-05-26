@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+	<!-- Information about financial support from energy companies via the Government. -->
+
+	<topic name = "energy companies">
+
+		<category>
+			<pattern>DISCUSS ENERGY COMPANIES</pattern>
+			<template>We are already talking about financial support from energy companies via the government</template>
+		</category>
+
+		<category>
+			<pattern>*</pattern>
+			<template>
+				<random>
+					<li>Sorry </li>
+					<li>I'm Sorry </li>
+					<li>I am Sorry </li>
+					<li>Apologies </li>
+					<li>My apologies </li>
+				</random><get name ="username"/> <random>
+					<li>I don't understand </li>
+					<li>I do not understand </li>
+					<li>I'm afraid I don't understand </li>
+					<li>I'm afraid I do not understand </li>
+				</random>how this relates to financial support from energy companies via the government
+			</template>
+		</category>
+
+		<!-- Grants. -->
+
+		<category>
+			<pattern>ENERGY SUPPLIER GRANTS</pattern>
+			<template>
+				Energy companies can offer grants to their customers who are in debt to their supplier. These grants allows one to pay off their debt.
+The following energy suppliers offer grants to their own customers:
+British Gas
+Bulb Energy
+EDF
+E.ON
+Ovo
+Scottish Power
+British Gas also offers grants that are available to anyone, regardless of what company is their energy supplier
+			</template>
+		</category>
+
+		<!-- Keyword Recognition: Grants, Grant, Debt. -->
+		
+		<category>
+			<pattern>GRANTS</pattern>
+			<template>
+				<srai>ENERGY SUPPLIER GRANTS</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>GRANTS *</pattern>
+			<template>
+				<srai>ENERGY SUPPLIER GRANTS</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* GRANTS *</pattern>
+			<template>
+				<srai>ENERGY SUPPLIER GRANTS</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* GRANTS</pattern>
+			<template>
+				<srai>ENERGY SUPPLIER GRANTS</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>GRANT</pattern>
+			<template>
+				<srai>ENERGY SUPPLIER GRANTS</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>GRANT *</pattern>
+			<template>
+				<srai>ENERGY SUPPLIER GRANTS</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* GRANT *</pattern>
+			<template>
+				<srai>ENERGY SUPPLIER GRANTS</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* GRANT</pattern>
+			<template>
+				<srai>ENERGY SUPPLIER GRANTS</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>DEBT</pattern>
+			<template>
+				<srai>ENERGY SUPPLIER GRANTS</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>DEBT *</pattern>
+			<template>
+				<srai>ENERGY SUPPLIER GRANTS</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* DEBT *</pattern>
+			<template>
+				<srai>ENERGY SUPPLIER GRANTS</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* DEBT</pattern>
+			<template>
+				<srai>ENERGY SUPPLIER GRANTS</srai>
+			</template>
+		</category>
+		
+		<!-- Winter Fuel Payment. -->
+
+		<category>
+			<pattern>WHAT IS WINTER FUEL PAYMENT</pattern>
+			<template>
+				The Winter Fuel Payment benefit is an annual sum of bewteen £100 - £300 that is given to people to help them pay heating bills.
+People who are eligible must be born before or on 26 September 1955, and either:
+Have lived in the UK for at least a day during 20 - 26 September 2021 (the 'qualifying week')
+OR:
+Live in Switzerland ort a European Economic Area (EEA) country AND
+Have a genuine and sufficient link to the UK, for example having lived and worked in the UK, or having family in the UK.
+
+This payment is not eligible for those who live in Cyprus, France, Gibraltar, Greece, Malta, Portugal, or Spain, as the average winter temperature is highter than the warmest region of the UK.
+
+Those who are eligible will get their payment automatically if they either:
+Get the State Pension, or
+Get another social security benefit (but not Housing Benefit, Council Tax Reduction, Child Benefit, or Universal Credit)
+
+Those who do not get either of those benefits, or live abroad, will need to manually make a claim themselves
+			</template>
+		</category>
+
+		<category>
+			<pattern>* WINTER FUEL PAYMENT *</pattern>
+			<template>
+				<srai>WHAT IS WINTER FUEL PAYMENT</srai>
+			</template>
+		</category>
+		
+	</topic>
+</aiml>

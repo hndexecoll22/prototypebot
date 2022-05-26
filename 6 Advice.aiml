@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+	<!-- Information about where to go for further advice. -->
+
+	<topic name = "advice">
+
+		<category>
+			<pattern>DISCUSS FURTHER ADVICE</pattern>
+			<template>We are already talking about where to go for further advice</template>
+		</category>
+
+		<category>
+			<pattern>*</pattern>
+			<template>
+				<random>
+					<li>Sorry </li>
+					<li>I'm Sorry </li>
+					<li>I am Sorry </li>
+					<li>Apologies </li>
+					<li>My apologies </li>
+				</random><get name ="username"/> <random>
+					<li>I don't understand </li>
+					<li>I do not understand </li>
+					<li>I'm afraid I don't understand </li>
+					<li>I'm afraid I do not understand </li>
+				</random>how this relates to where to go for further advice
+			</template>
+		</category>
+
+		<!-- Links for further advice. -->
+
+		<category>
+			<pattern>WHERE CAN I GO FOR FURTHER ADVICE</pattern>
+			<template>
+				The following links are useful websites for more information:
+https://www.citizensadvice.org.uk/
+https://www.moneysavingexpert.com/family/money-help/#cuthouseholdbills
+https://www.moneyhelper.org.uk/en/everyday-money/budgeting/how-to-save-money-on-household-bills 
+https://www.understandinguniversalcredit.gov.uk/new-to-universal-credit/help-with-managing-your-money/ 
+https://www.gov.uk/improve-energy-efficiency
+https://www.gov.uk/energy-company-obligation
+https://www.understandinguniversalcredit.gov.uk/new-to-universal-credit/help-with-managing-your-money/ 
+			</template>
+		</category>
+
+		<!-- Keyword recognition: Advice. -->
+		
+		<category>
+			<pattern>ADVICE</pattern>
+			<template>
+				<srai>WHERE CAN I GO FOR FURTHER ADVICE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* ADVICE</pattern>
+			<template>
+				<srai>WHERE CAN I GO FOR FURTHER ADVICE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* ADVICE *</pattern>
+			<template>
+				<srai>WHERE CAN I GO FOR FURTHER ADVICE</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>ADVICE *</pattern>
+			<template>
+				<srai>WHERE CAN I GO FOR FURTHER ADVICE</srai>
+			</template>
+		</category>
+		
+	</topic>
+</aiml>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+	<!-- Information about financial support from the Council. -->
+
+	<topic name = "council">
+
+		<category>
+			<pattern>DISCUSS COUNCIL SUPPORT</pattern>
+			<template>We are already talking about financial support from the council</template>
+		</category>
+
+		<category>
+			<pattern>*</pattern>
+			<template>
+				<random>
+					<li>Sorry </li>
+					<li>I'm Sorry </li>
+					<li>I am Sorry </li>
+					<li>Apologies </li>
+					<li>My apologies </li>
+				</random><get name ="username"/> <random>
+					<li>I don't understand </li>
+					<li>I do not understand </li>
+					<li>I'm afraid I don't understand </li>
+					<li>I'm afraid I do not understand </li>
+				</random>how this relates to financial support from the council
+			</template>
+		</category>
+
+		<!-- Help from the council. -->
+		
+		<category>
+			<pattern>WHAT HELP CAN I GET FROM THE COUNCIL</pattern>
+			<template>Your local council may give you vouchers to help pay for day-to-day essential like:
+Hot meals
+Second-hand furnature
+Household appliances, like cookers or washing machines
+This is known as 'welfare assistance' or the 'Household Support Fund'. Type "tell me more" for more information
+			</template>
+		</category>
+
+		<!-- Keyword Recognition: What * Council. -->
+		
+		<category>
+			<pattern>WHAT * COUNCIL</pattern>
+			<template>
+				<srai>WHAT HELP CAN I GET FROM THE COUNCIL</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>WHAT * COUNCIL *</pattern>
+			<template>
+				<srai>WHAT HELP CAN I GET FROM THE COUNCIL</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* WHAT * COUNCIL</pattern>
+			<template>
+				<srai>WHAT HELP CAN I GET FROM THE COUNCIL</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* WHAT * COUNCIL *</pattern>
+			<template>
+				<srai>WHAT HELP CAN I GET FROM THE COUNCIL</srai>
+			</template>
+		</category>
+
+		<category>
+			<that>
+				Your local council may give you vouchers to help pay for day-to-day essential like:
+Hot meals
+Second-hand furnature
+Household appliances, like cookers or washing machines
+				This is known as 'welfare assistance' or the 'Household Support Fund'. Type "tell me more" for more information
+			</that>
+			<pattern>tell me more</pattern>
+			<template>
+				£421 million has been made available to County Councils and Unitary Authorities in England.
+This money will be used to help those in need with significantly rising living costs through the Household Support Fund.
+This funding covers the period 1 April 2022 to 30 September 2022
+			</template>
+		</category>
+		
+		<!-- Household Support Fund. -->
+
+		<category>
+			<pattern>WHAT IS HOUSEHOLD SUPPORT</pattern>
+			<template>
+				The Household Support Fund is a measure that provides payments to help households with essential loving expenses like food, clothing and utilities.
+This funding is available from 1 April 2022 to 30 September 2022. It is distributed through local councils.
+Those who wish to apply must do so through their local council
+			</template>
+		</category>
+
+		<!-- Keyword recognition: What * Household Support. -->
+		
+		<category>
+			<pattern>WHAT * HOUSEHOLD SUPPORT</pattern>
+			<template>
+				<srai>WHAT IS HOUSEHOLD SUPPORT</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>WHAT * HOUSEHOLD SUPPORT *</pattern>
+			<template>
+				<srai>WHAT IS HOUSEHOLD SUPPORT</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* WHAT * HOUSEHOLD SUPPORT</pattern>
+			<template>
+				<srai>WHAT IS HOUSEHOLD SUPPORT</srai>
+			</template>
+		</category>
+
+		<category>
+			<pattern>* WHAT * HOUSEHOLD SUPPORT *</pattern>
+			<template>
+				<srai>WHAT IS HOUSEHOLD SUPPORT</srai>
+			</template>
+		</category>
+
+		<!-- Food. -->
+
+		<category>
+			<pattern>SUPPORT FOR FOOD</pattern>
+			<template>
+				Local support can be given for families who may need food but cannot afford it. Community organisations called 'food banks' can provide this support.
+Support with food for babies and infants can be given for whose whho are either 10 weeks pregnant or have a child under 4 years old
+For more information, type "food bank", or "infant support"
+			</template>
+		</category>
+		
+		<category>
+			<pattern>food bank</pattern>
+			<template>
+				Food banks are community organisations that can help provide food tho those who may not be able to afford it.
+Those who wish to use a food bank will usually need to get a referral.
+This can be done through local referrer organisations
+			</template>
+		</category>
+
+		<category>
+			<pattern>infant support</pattern>
+			<template>
+				Free vitamins and Health Start vouchers for milk, fruit and vegetables and infant formula milk canm be provided to those who may need it for their child but cannot afford it
+In order to be eligible for these benefits, one must also be claiming either:
+Income Support
+Income-based Jobseeker's Allowance
+Income-related Employement asnd Support Allowance - but only if you're pregnant
+Child Tax Credit - and your householf earns £16,190 a year or less
+Pension Credit
+Universal Credit - and your household earns £408 a month or less
+
+Those who are under 18 and pregnant are eligible even if they do not get any of the above benefits
+			</template>
+		</category>
+		
+	</topic>
+</aiml>

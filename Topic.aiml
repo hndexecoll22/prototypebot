@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+	<!-- Code for the topic functions, and information regarding what topics the bot covers. -->
+	
+	<!-- Discuss. -->
+
+	<category>
+		<pattern>DISCUSS *</pattern>
+		<template>
+			<think><set name = "discuss"><star/></set></think>
+			<condition name = "discuss">
+				<li value = "means tested"><think><set name = "topic">means tested</set></think>
+					What would you like to know about means-tested financial support?</li>			
+				<li value = "energy companies"><think><set name ="topic">energy companies</set></think>
+					What would you like to know about financial support from energy companies via the government?</li>			
+				<li value = "council support">
+					What would you like to know about financial support from the <set name = "topic">council</set>?</li>
+				<li value = "electricity">
+					What would you like to know about money saving tips for the home regarding <set name = "topic">electricity</set> usage?</li>
+				<li value ="gas">
+					What would you like to know about money saving tips for the home regarding <set name = "topic">gas</set> usage?</li>
+				<li value = "further advice">
+					What would you like to know about where to go for further <set name = "topic">advice</set>?</li>
+				<li>"<get name ="discuss"/>" is not a topic I know. Please type "what do you know" to see what topics I can talk about</li>
+			</condition>
+		</template>
+	</category>
+	
+	
+	<!-- Telling the user what the current topic is when asked. -->
+	
+	<category>
+		<pattern>WHAT IS THE TOPIC</pattern>
+		<template>
+			<condition name = "topic">
+				<li value = "means tested">We are currently discussing means tested financial support</li>
+				<li value = "energy companies">We are currently discussing financial support from energy companies via the government</li>
+				<li value = "council">We are currently discussing finincial support from the council</li>
+				<li value = "electricity">We are currently discussing money saving tips for the home regarding electricity usage</li>
+				<li value = "gas">We are currently discussing money saving tips for the home regarding gas usage</li>
+				<li value = "advice">We are currently discussing where to go for further advice</li>
+				<li>There is currently no topic set</li>
+			</condition>
+		</template>
+	</category>
+
+	<category>
+		<pattern>what are * talking about</pattern>
+		<template>
+			<srai>WHAT IS THE TOPIC</srai>
+		</template>
+	</category>
+	
+	<category>
+		<pattern>what are * discussing</pattern>
+		<template>
+			<srai>WHAT IS THE TOPIC</srai>
+		</template>
+	</category>
+
+	<!-- Telling the user what knowledge the bot has. -->
+
+	<category>
+		<pattern>WHAT DO YOU KNOW</pattern>
+		<template>
+			I was created to provide advice to people regarding how to save living costs, and how to apply for government and council support.
+The topics I can talk about are:
+MEANS TESTED financial support
+Financial support from ENERGY COMPANIES via the government
+Financial COUNCIL SUPPORT
+Money saving tips for the home regarding ELECTRICITY usage
+Money saving tips for the home regarding GAS usage
+Where to go for FURTHER ADVICE
+
+To choose a topic, type "discuss" followed by one of the above capitalised phrases.
+For example, type "discuss means tested" to choose to talk about means-tested financial support
+		</template>
+	</category>
+</aiml>
