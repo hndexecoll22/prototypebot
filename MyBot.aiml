@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Author: -->
+<aiml>
+	<category>
+		<pattern> Hello</pattern> 
+		<template>
+			<random>
+				<li>Hello! How can I help you today?</li>
+				<li>Hi! What can I help you with today?</li>
+			</random>
+		</template>
+	</category>
+	
+	<category>
+		<pattern> Hello *</pattern>
+		<template>
+			Hello! How can I help you today?
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			I am *
+		</pattern>
+		<template>
+			<think>
+				<set name = "username">
+					<star/>
+				</set>
+					 </think>
+			Hi <get name ="username"/> how can i help?
+		</template>
+	</category>
+
+	<category>
+		<pattern> What financial support can i get</pattern>
+		<template>
+			Financial support is available but you must meet a certain criteria. You may be eligible for Universal credit, the possiblity of extra benefits if eligible for UC, Jobseekers allowance and Employment and Support Allowance.
+		</template>
+	</category>
+
+	<category>
+		<pattern> What is the criteria for universal credit </pattern>
+		<template> 
+			As stated on the government website, to be eligible for universal credit, you must live in the UK, be aged 18 or over, be under state pension age and have 16,000 or less in money, savings and investments. However if you are aged 16-17 there are some exceptions. Please specify to view these exceptions
+		</template>
+	</category>
+
+	<category>
+		<pattern> What are the exceptions for universal credit</pattern>
+		<template>
+			If aged 16-17 the exceptions to universal credit are as follows; having a health condition or disability - providing medical evidence, caring for a severely disabled person, if you are responsible for a child, living with a partner having responsibilty for a child and your partner is eligible for UC, you are pregnant and expecting the baby in the next 11 weeks, you've had a baby in the last 15 weeks and you do not have parental support - you do not live with parents and are not under local authority care.
+		</template>
+	</category>
+
+	<category>
+		<pattern> I am eligible for universal credit how will i get paid</pattern>
+		<template>
+			You will be paid once a month into your bank, building society or credit union account. If you do not own any of these accounts please call the unverisal credit helpline to arrange a way to be paid. Your payments will occur on the same date every month.
+			The wait time for the first payment at the moment is around 5 weeks, if you need help with costs in the meantime please apply for an advance. Your payments can include an amount for housing, which you will need to pay your landlord. 
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			How can i apply for universal credit
+		</pattern>
+		<template>
+			Applications are made online. You will need to create an account as this will be used to submit your claim and must complete your claim within 28 days of creating an account. If you live with your partner, they will have to create an account aswell. Both accounts will be linked together when you claim. You will need any bank/building society/credit union details, your email addres and acces to a phone.
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			How much will i get paid from universal credit
+		</pattern>
+		<template>
+			Your monthly payments will depend on a certain set of circumstances. For example if you are single and under 25, your payment may differ to someone who is in a couple and under 25. Payments may also differ depening if you have any disabilities or children in the household. Please enquire further for full set of circumstances. 
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			What is the full set of circumstances for monthly payments
+		</pattern>
+		<template>
+			The full set of circumstances are as folows:
+			1. Single and under 25 - £265.31
+			2. Single and 25 or over - £334.91
+			3. In a couple and both under 25 - £416.45 (for you both)
+			4. In a couple and either of you are 25 or over £525.72 (for you both)
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			Can i get an advance on my payment
+		</pattern>
+		<template>
+			You may be able to get an advance on your first payment. You will have to apply online or through your job centre plus work coach. You will have to pay this advance back, you can choose to pay it back over 12 months if you applied before 12th April 2021 or 24 months if you applied on or after the 12th April 2021. You do not pay interest on this advancement. 
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			I have children how will my payments differ
+		</pattern>
+		<template>
+			If your first child was born before the 6th April 2017 you will recieve an extra monthly amount of £290 and for your first child born on or after this date, you will receive an extra £244.58. For your second and any other eligible children you will recieve an extra £244.58 per child. If you have a disabled child or severely disabled child you could recieve an extra £132.89 or £414.88
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			I need more help with childcare costs
+		</pattern>
+		<template>
+			You can get up to 85% of your costs covered. This is up to £646.35 for one child and £1,108.04 for two or more children
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			Will i have extra responsibilities when claiming for universal credit
+		</pattern>
+		<template>
+			Yes. These may depend on your circumstances. You may be asked to write a CV, apply for jobs and go on training courses. If you have children these will differ aswell depending on the age of your children
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			I have children what responsibilites will i have when claiming universal credit
+		</pattern>
+		<template>
+			These will depend of the age your child.
+			1. Under 1, you do not need to look for work
+			2. Aged 1, you dont need to look for work but you will have phone appointments with a work coach to discuss future plans for work
+			3. Aged 2, you wil continue to have regular phone appointments with your work coach and carry out work preparation activites (writing a CV etc)
+			4. Aged 3-4, you will work a maximum of 16hrs a week or spend equivalent time looking for work
+			5. Aged 5-12, you will work a maximum of 25hrs a week or spend equivalent time looking for work
+			6. Aged 13+, you will work a maximum of 35hrs a week or spend equivalent time looking for work
+		</template>
+	</category>
+	
+	<category>
+		<pattern>
+			I am in employment how will my payments differ
+		</pattern>
+		<template>
+			Your payments will gradually reduce as your earnings increase. For every £1 you earn, your payment will be reduced by 55p. 
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			What is the work allowance
+		</pattern>
+		<template>
+			The work allowance is how much you can earn before your payments are reduced if you are repsonsible for a child/young person and/or living with disability or health condition which affects your ability to work. If you get help with housing costs your monthly work allowance will be £344 and if you do not get help with housing costs your monthly work allowance will be £573
+		</template>
+	</category>
+	
+	<category>
+		<pattern>
+			I am struggling to pay my energy bills can I get support from energy companies
+		</pattern>
+		<template>
+			Yes! Many energy suppliers offer grants to help pay off any energy debts also if you are born on or before 26th September 1955, you will be entitled to the Winter Fuel Payments.
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			What is a winter fuel payment
+		</pattern>
+		<template>
+			People born on or before 26 September 1955 are entitled to get an extra £100-£300 to help pay their heating bills. These are given automatically, you do not need to claim for one
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			When are winter fuel payments made
+		</pattern>
+		<template>
+			Most payments are made automatically in November and December. If you didn't recieve a payment please contact the Winter Fuel Payment Centre
+		</template>
+	</category>
+	
+	<category>
+		<pattern>
+			What companies offer these energy grants
+		</pattern>
+		<template>
+			The following companies are as follows; British Gas Energy Trust, Scottish Power Hardship Fund, Ovo Energy Fund, E.ON Energy Fund, E.ON Next Energy Fund, EDF Energy Customer Support Fund, Bulb Energy Fund, Octopus 'Octo Assist Fund'
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			Can I get financial support from my local council
+		</pattern>
+		<template>
+			Local councils can provide suppport for you. They may be able to provide you with vouchers to help pay for day-to-day essentials such as hot meals, second-hand furniture and household appliances.
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			Is there any other financial support i can get from my council
+		</pattern>
+		<template>
+			You may be eligible for a Council Tax reduction, you have to apply to your local council. This is not available for people living in Northern Ireland.
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			How will i know if i am eligible
+		</pattern>
+		<template>
+			You could be eligible if you are on a low income or claim benefits. You could see reductions up to 100%. This will depend on where you live, current circumstances, household income, if children and other adults live with you
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			How can i reduce my electric bills
+		</pattern>
+		<template>
+			There are loads of simple ways to get costs down for your electric bill! British Gas have some general tips on how to do this. Some general tips are as follows; don't use standby modes on appliances - this costs on average an extra £35 per year! Unplug all unsused chargers, this can save you up to £60 per year! Update your heating system, new boilers are more energy efficient - this could save you up to £195!
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			How can i save on my gas bill
+		</pattern>
+		<template>
+			There are loads of tips on how to save on your gas bill. Firstly do check what tarriff you are on, fixed tarriffs will stay the same each month but on a standard tariff, the cost of your bill can go up or down.
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			More tips on saving on bills
+		</pattern>
+		<template>
+			Getting a smart meter or energy monitor will help you understand what you are using and may be able to help you work out how to spend less!
+		</template>
+	</category>
+
+	<category>
+		<pattern>
+			Where can i+ go for further advice
+		</pattern>
+		<template>
+			The citizens advice website is a good webite as it has a lot of information on different topics. The website can be found here: https://www.citizensadvice.org.uk/
+		</template>
+	</category>
+	
+</aiml>
+
